@@ -1,0 +1,577 @@
+<!DOCTYPE HTML >
+<html lang="en">
+    <head>
+        <title>Carto</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style.css">
+    </head>
+<body>
+
+<header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link">Home</a></li>
+                <li><a href="Fashion.html" class="Link active">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link">Seller</a></li>
+                <li><a href="User.html" class="Link">User</a></li>
+            </ul>
+        </nav>
+</header>
+
+<div class="breadcrumb">
+    <a href="Home.html">Home</a> &gt; <a href="Fashion.html">Fashion</a>
+</div>
+
+<hr>
+
+<main>
+
+<label for="Fashion">Select Fashion Category:</label>
+<select id="Fashion">
+    <option value="Shirt">Shirt</option>
+    <option value="Skirt">Skirt</option>
+</select>
+
+  <label for="sort_by_price">Sort by Price:</label>
+  <select id="sort_by_price">
+      <option value="low-to-high">price low to high</option>
+      <option value="high-to-low">price high to low</option>
+  </select>
+  
+<label for="sort_by_name">Sort by Name:</label>
+  <select id="sort_by_name">
+      <option value="A-Z">A-Z</option>
+      <option value="Z-A">Z-A</option>
+  </select>
+
+
+<section class="items">
+
+<!--items list here-->
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-1.png" alt="Shirt" class="Product-image">
+    <div class="price">70</div> 
+    <div class="name">Work Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-2.png" alt="Shirt" class="Product-image">
+    <div class="price">90</div> 
+    <div class="name">Striped Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-3.png" alt="Shirt" class="Product-image">
+    <div class="price">110</div> 
+    <div class="name">Work Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-4.png" alt="Shirt" class="Product-image">
+    <div class="price">90</div> 
+    <div class="name">Plain Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Blue
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-5.png" alt="Shirt" class="Product-image">
+    <div class="price">50</div> 
+    <div class="name">Plain Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-6.png" alt="Shirt" class="Product-image">
+    <div class="price">100</div> 
+    <div class="name">Plain shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-7.png" alt="Shirt" class="Product-image">
+    <div class="price">60</div> 
+    <div class="name">Patterned Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-8.png" alt="Shirt" class="Product-image">
+    <div class="price">110</div> 
+    <div class="name">Striped Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Blue
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-9.png" alt="Shirt" class="Product-image">
+    <div class="price">75</div> 
+    <div class="name">Striped Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Brown
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-10.png" alt="Shirt" class="Product-image">
+    <div class="price">90</div> 
+    <div class="name">Bow print Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Blue
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-11.png" alt="Shirt" class="Product-image">
+    <div class="price">60</div> 
+    <div class="name">Patterned Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Shirt">
+    <img src="images/shirt-12.png" alt="Shirt" class="Product-image">
+    <div class="price">40</div> 
+    <div class="name">Striped Shirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Blue
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-1.png" alt="Skirt" class="Product-image">
+    <div class="price">100</div> 
+    <div class="name">Skirt with Bow</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Black
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-2.png" alt="Skirt" class="Product-image">
+    <div class="price">150</div> 
+    <div class="name">Summer Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-3.png" alt="Skirt" class="Product-image">
+    <div class="price">130</div> 
+    <div class="name">Layered Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-4.png" alt="Skirt" class="Product-image">
+    <div class="price">200</div> 
+    <div class="name">Winter Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Brown
+Gender:	Women
+Material: Leather
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-5.png" alt="Skirt" class="Product-image">
+    <div class="price">250</div> 
+    <div class="name">Winter Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Brown
+Gender:	Women
+Material: Wool
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-6.png" alt="Skirt" class="Product-image">
+    <div class="price">90</div> 
+    <div class="name">Work Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Brown
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-7.png" alt="Skirt" class="Product-image">
+    <div class="price">130</div> 
+    <div class="name">Work Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Wool
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-8.png" alt="Skirt" class="Product-image">
+    <div class="price">150</div> 
+    <div class="name">Work Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	White
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-9.png" alt="Skirt" class="Product-image">
+    <div class="price">230</div> 
+    <div class="name">Work Skirt</div>	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Brown
+Gender:	Women
+Material: Leather
+    </pre></div> 
+</div>
+
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-10.png" alt="Skirt" class="Product-image">
+    <div class="price">140</div> 
+    <div class="name">Work Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Gray
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-11.png" alt="Skirt" class="Product-image">
+    <div class="price">300</div> 
+    <div class="name">Party Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Black, Brown
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Skirt">
+    <img src="images/skirt-12.png" alt="Skirt" class="Product-image">
+    <div class="price">160</div> 
+    <div class="name">Work Skirt</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Brown
+Gender:	Women
+Material: Cotton
+    </pre></div> 
+</div>
+
+</section>
+
+</main>
+ 
+    <footer> 
+    <div class="footer-content">
+   <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+       <div class="contact-us">
+           <h4>Contact Us</h4>
+           <p>+96659823459</p>
+           <p>Carto@gmail.com</p>
+       </div>
+        <div class="divider"></div>
+      <div class ="about-us">
+<h4>About us </h4> 
+<p>Our platform provides a secure and convenient shopping experience,
+    offering a wide range of products at competitive prices. Enjoy fast delivery,
+     flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+     All products come with an authenticity guarantee and quality warranty</p>
+     </div>
+</div>
+     <div class="social-icon">
+     <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+     <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+     <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+     <img src="images/instagram.png" alt="instagram" class="social-link">
+     </div>
+
+    
+   </footer>
+   <div class ="copyright">
+   &copy;2024 Carto All right reserved
+   </div>
+
+<script>
+    // Function to filter items by category
+    document.getElementById("Fashion").addEventListener("change", function() {
+        const selectedCategory = this.value;
+        document.querySelectorAll(".card").forEach(card => {
+            card.style.display = card.dataset.category === selectedCategory ? "block" : "none";
+        });
+    });
+
+    // Function to sort items by price
+    document.getElementById("sort_by_price").addEventListener("change", function() {
+        const sortOrder = this.value;
+        const itemsContainer = document.querySelector(".items");
+        const items = Array.from(itemsContainer.children);
+
+        items.sort((a, b) => {
+            const priceA = parseInt(a.querySelector(".price").innerText);
+            const priceB = parseInt(b.querySelector(".price").innerText);
+            return sortOrder === "low-to-high" ? priceA - priceB : priceB - priceA;
+        });
+
+        items.forEach(item => itemsContainer.appendChild(item));
+    });
+
+    // Function to sort items by name
+    document.getElementById("sort_by_name").addEventListener("change", function() {
+        const sortOrder = this.value;
+        const itemsContainer = document.querySelector(".items");
+        const items = Array.from(itemsContainer.children);
+
+        items.sort((a, b) => {
+            const nameA = a.querySelector(".name").innerText.toLowerCase();
+            const nameB = b.querySelector(".name").innerText.toLowerCase();
+            if (sortOrder === "A-Z") {
+                return nameA.localeCompare(nameB);
+            } else {
+                return nameB.localeCompare(nameA);
+            }
+        });
+
+        items.forEach(item => itemsContainer.appendChild(item));
+    });
+
+    // Set default category display
+    document.getElementById("Fashion").dispatchEvent(new Event("change"));
+
+// Function to increase quantity
+function increaseQuantity(button) {
+    const quantityDisplay = button.previousElementSibling;
+    let quantity = parseInt(quantityDisplay.innerText);
+    quantityDisplay.innerText = ++quantity;
+}
+
+// Function to decrease quantity
+function decreaseQuantity(button) {
+    const quantityDisplay = button.nextElementSibling;
+    let quantity = parseInt(quantityDisplay.innerText);
+    if (quantity > 1) {
+        quantityDisplay.innerText = --quantity;
+    }
+}
+
+//////////////////////////////////////////////////
+  function applyDarkTheme() {
+    // Add the 'dark-theme' class and remove 'light-theme'
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
+  }
+
+  function applyLightTheme() {
+    // Add the 'light-theme' class and remove 'dark-theme'
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+  }
+</script>
+</body>
+
+</html>

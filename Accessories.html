@@ -1,0 +1,799 @@
+<!DOCTYPE HTML >
+<html lang="en">
+    <head>
+        <title>Carto</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style.css">
+    </head>
+	
+<body>  
+  
+<header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link">Home</a></li>
+                <li><a href="Fashion.html" class="Link">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link active">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link">Seller</a></li>
+                <li><a href="User.html" class="Link">User</a></li>
+            </ul>
+        </nav>
+</header>
+
+    <div class="breadcrumb">
+        <a href="Home.html">Home</a> &gt; <a href="Accessories.html">Accessories</a>
+    </div>
+	<hr>
+
+<label for="Accessories">Select Accessory Type:</label>
+  <select id="Accessories">
+      <option value="Ring">Ring</option>
+	  <option value="Earrings">Earrings</option>
+	  <option value="Necklace">Necklace</option>
+  </select>
+
+  <label for="sort_by_price">Sort by Price:</label>
+  <select id="sort_by_price">
+      <option value="low-to-high">price low to high</option>
+      <option value="high-to-low">price high to low</option>
+  </select>
+  
+<label for="sort_by_name">Sort by Name:</label>
+  <select id="sort_by_name">
+      <option value="A-Z">A-Z</option>
+      <option value="Z-A">Z-A</option>
+  </select>
+
+
+<main>
+
+<section class="items">
+
+<!--items list here-->
+<!--Earrings-->
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-1.png" alt="Earrings" class="Product-image">
+    <div class="product-price">200</div> 
+    <div class="product-name">Elegant Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Gold
+Gender:	Women
+Material: Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-2.png" alt="Earrings" class="Product-image">
+    <div class="product-price">400</div> 
+    <div class="product-name">Flower-Shaped Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div> 
+	<div class="description"><pre>
+Color:	white, Gold
+Gender:	Women
+Material: Pearl,Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-3.png" alt="Earrings" class="Product-image">
+    <div class="product-price">600</div> 
+    <div class="product-name">Trendy Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: white,Silver
+Gender:	Women
+Material: Pearl,Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-4.png" alt="Earrings" class="Product-image">
+    <div class="product-price">350</div> 
+    <div class="product-name">Trendy Earrings</div>    
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: white,Silver
+Gender:	Women
+Material: Pearl,Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-5.png" alt="Earrings" class="Product-image">
+    <div class="product-price">150</div> 
+    <div class="product-name">Bow Earrings</div>    
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    
+    <div class="description"><pre>
+Color: white,Gold
+Gender:	Women
+Material: Pearl,Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-6.png" alt="Earrings" class="Product-image">
+    <div class="product-price">400</div> 
+    <div class="product-name">Elegant Earrings</div>   
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div> 
+	<div class="description"><pre>
+Color: white,Gold
+Gender:	Women
+Material: Pearl,Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-7.png" alt="Earrings" class="Product-image">
+    <div class="product-price">700</div> 
+    <div class="product-name">Trendy Earrings</div>	
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	    
+	<div class="description"><pre>
+Color: white,Gold
+Gender:	Women
+Material: Pearl,Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-8.png" alt="Earrings" class="Product-image">
+    <div class="product-price">1200</div> 
+    <div class="product-name">Trendy Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: white,Gold
+Gender:	Women
+Material: Pearl,Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-9.png" alt="Earrings" class="Product-image">
+    <div class="product-price">300</div> 
+    <div class="product-name">Classic Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Red, Gold, White
+Gender:	Women
+Material: Gold,Ruby,moonstone
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-10.png" alt="Earrings" class="Product-image">
+    <div class="product-price">550</div> 
+    <div class="product-name">Elegant Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Green,Gold
+Gender:	Women
+Material: Gold,Diamond,Emerald
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-11.png" alt="Earrings" class="Product-image">
+    <div class="product-price">200</div> 
+    <div class="product-name">Classic Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>  
+    <div class="description"><pre>
+Color: Pink
+Gender:	Women
+Material: Morganite
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Earrings">
+    <img src="images/Earrings-12.png" alt="Earrings" class="Product-image">
+    <div class="product-price">250</div> 
+    <div class="product-name">Trendy Earrings</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Blue
+Gender:	Women
+Material: sapphire
+    </pre></div> 
+</div>
+
+<!--Ring-->
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-1.png" alt="Ring" class="Product-image">
+    <div class="product-price">200</div> 
+    <div class="product-name">Classic Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>   
+	<div class="description"><pre>
+Color: Silver, Green
+Gender:	Women
+Material: Emerald, Diamond
+    </pre></div> 
+</div>
+ 
+<div class="card" data-category="Ring">
+    <img src="images/ring-2.png" alt="Ring" class="Product-image">
+    <div class="product-price">500</div> 
+    <div class="product-name">Classic Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Silver, Blue
+Gender:	Women
+Material: Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-3.png" alt="Ring" class="Product-image">
+    <div class="product-price">600</div> 
+    <div class="product-name">Beautiful Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: White, Gold
+Gender:	Women
+Material: Gold, Pearl
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-4.png" alt="Ring" class="Product-image">
+    <div class="product-price">150</div> 
+    <div class="product-name">Flower-Shaped Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: White, Gold
+Gender:	Women
+Material: Gold, Pearl
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-5.png" alt="Ring" class="Product-image">
+    <div class="product-price">300</div> 
+    <div class="product-name">Flower-Shaped Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Silver
+Gender:	Women
+Material: Gold, Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-6.png" alt="Ring" class="Product-image">
+    <div class="product-price">700</div> 
+    <div class="product-name">Shiny Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Silver
+Gender:	Women
+Material: Gold, Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-7.png" alt="Ring" class="Product-image">
+    <div class="product-price">650</div> 
+    <div class="product-name">Shiny Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Silver
+Gender:	Women
+Material: Gold, Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-8.png" alt="Ring" class="Product-image">
+    <div class="product-price">250</div> 
+    <div class="product-name">Trendy Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Blue
+Gender:	Women
+Material: Gold, sapphire
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-9.png" alt="Ring" class="Product-image">
+    <div class="product-price">350</div> 
+    <div class="product-name">Elegant Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Purple
+Gender:	Women
+Material: Gold, Amethyst
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-10.png" alt="Ring" class="Product-image">
+    <div class="product-price">550</div> 
+    <div class="product-name">Elegant Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Pink
+Gender:	Women
+Material: Gold, Morganite
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-11.png" alt="Ring" class="Product-image">
+    <div class="product-price">750</div> 
+    <div class="product-name">Elegant Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    
+    <div class="description"><pre>
+Color: Gold, Green
+Gender:	Women
+Material: Emerald, Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Ring">
+    <img src="images/ring-12.png" alt="Ring" class="Product-image">
+    <div class="product-price">750</div> 
+    <div class="product-name">Trendy Ring</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, White
+Gender:	Women
+Material: Gold, Pearl
+    </pre></div> 
+</div>
+
+<!--Necklace-->
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-1.png" alt="Necklace" class="Product-image">
+    <div class="product-price">750</div> 
+    <div class="product-name">Flower-Shaped Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, White
+Gender:	Women
+Material: Gold, Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-2.png" alt="Necklace" class="Product-image">
+    <div class="product-price">600</div> 
+    <div class="product-name">Elegant Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold
+Gender:	Women
+Material: Gold, Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-3.png" alt="Necklace" class="Product-image">
+    <div class="product-price">650</div> 
+    <div class="product-name">Elegant Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold
+Gender:	Women
+Material: Gold, Diamond
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-4.png" alt="Necklace" class="Product-image">
+    <div class="product-price">500</div> 
+    <div class="product-name">Heart-Shaped Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Pink
+Gender:	Women
+Material: Gold, Morganite
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-5.png" alt="Necklace" class="Product-image">
+    <div class="product-price">400</div> 
+    <div class="product-name">Trendy Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Green
+Gender:	Women
+Material: Gold, Emerald
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-6.png" alt="Necklace" class="Product-image">
+    <div class="product-price">350</div> 
+    <div class="product-name">Classic Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Green
+Gender:	Women
+Material: Gold, Emerald
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-7.png" alt="Necklace" class="Product-image">
+    <div class="product-price">250</div> 
+    <div class="product-name">Flower-Shaped Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, White
+Gender:	Women
+Material: Gold, Pearl
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-8.png" alt="Necklace" class="Product-image">
+    <div class="product-price">300</div> 
+    <div class="product-name">Classic Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, White
+Gender:	Women
+Material: Gold, Pearl
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-9.png" alt="Necklace" class="Product-image">
+    <div class="product-price">300</div> 
+    <div class="product-name">Cherry-Shaped Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, Red
+Gender:	Women
+Material: Gold, Almandine
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-10.png" alt="Necklace" class="Product-image">
+    <div class="product-price">550</div> 
+    <div class="product-name">Bow-Shaped Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color:	Gold
+Gender:	Women
+Material: Gold
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-11.png" alt="Necklace" class="Product-image">
+    <div class="product-price">400</div> 
+    <div class="product-name">Classic Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold, White
+Gender:	Women
+Material: Gold, Pearl
+    </pre></div> 
+</div>
+
+<div class="card" data-category="Necklace">
+    <img src="images/Necklacs-12.png" alt="Necklace" class="Product-image">
+    <div class="product-price">500</div> 
+    <div class="product-name">Elegant Necklace</div>
+	<button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+    <div class="description"><pre>
+Color: Gold
+Gender:	Women
+Material: Gold
+    </pre></div> 
+</div>
+
+<!--items list here-->
+
+</section>
+
+</main>
+ 
+    <footer> 
+    <div class="footer-content">
+   <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+       <div class="contact-us">
+           <h4>Contact Us</h4>
+           <p>+96659823459</p>
+           <p>Carto@gmail.com</p>
+       </div>
+        <div class="divider"></div>
+      <div class ="about-us">
+<h4>About us </h4> 
+<p>Our platform provides a secure and convenient shopping experience,
+    offering a wide range of products at competitive prices. Enjoy fast delivery,
+     flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+     All products come with an authenticity guarantee and quality warranty</p>
+     </div>
+</div>
+     <div class="social-icon">
+     <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+     <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+     <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+     <img src="images/instagram.png" alt="instagram" class="social-link">
+     </div>
+
+    
+   </footer>
+   <div class ="copyright">
+   &copy;2024 Carto All right reserved
+   </div>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const items = Array.from(document.querySelectorAll(".card"));
+    const accessorySelect = document.getElementById("Accessories");
+    const sortPriceSelect = document.getElementById("sort_by_price");
+    const sortNameSelect = document.getElementById("sort_by_name");
+
+    // Function to display items based on the selected category
+    function filterItems() {
+        const selectedCategory = accessorySelect.value;
+        items.forEach(item => {
+            item.style.display = item.dataset.category === selectedCategory ? "block" : "none";
+        });
+    }
+
+    // Function to sort items by price or name
+    function sortItems() {
+        const container = document.querySelector(".items");
+        const sortedItems = [...items].filter(item => item.style.display === "block");
+        
+        // Sort by price
+        if (sortPriceSelect.value) {
+            sortedItems.sort((a, b) => {
+                const priceA = parseInt(a.querySelector(".product-price").innerText);
+                const priceB = parseInt(b.querySelector(".product-price").innerText);
+                return sortPriceSelect.value === "low-to-high" ? priceA - priceB : priceB - priceA;
+            });
+        }
+
+        // Sort by name
+        if (sortNameSelect.value) {
+            sortedItems.sort((a, b) => {
+                const nameA = a.querySelector(".product-name").innerText.toLowerCase();
+                const nameB = b.querySelector(".product-name").innerText.toLowerCase();
+                return sortNameSelect.value === "A-Z" ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+            });
+        }
+
+        sortedItems.forEach(item => container.appendChild(item));
+    }
+
+    sortItems(); // Apply initial sorting if any
+	
+    // Event listeners for category and sorting selections
+    accessorySelect.addEventListener("change", () => {
+        filterItems();
+        sortItems();
+    });
+    sortPriceSelect.addEventListener("change", sortItems);
+    sortNameSelect.addEventListener("change", sortItems);
+});
+
+// Function to increase quantity
+function increaseQuantity(button) {
+    const quantityDisplay = button.previousElementSibling;
+    let quantity = parseInt(quantityDisplay.innerText);
+    quantityDisplay.innerText = ++quantity;
+}
+
+// Function to decrease quantity
+function decreaseQuantity(button) {
+    const quantityDisplay = button.nextElementSibling;
+    let quantity = parseInt(quantityDisplay.innerText);
+    if (quantity > 1) {
+        quantityDisplay.innerText = --quantity;
+    }
+}
+
+// Function to add product to cart
+function addToCart(button) {
+    const card = button.closest('.card');
+    const isSelected = card.querySelector('.select-product').checked;
+    const productName = card.querySelector('.product-name').innerText;
+    const productPrice = card.querySelector('.product-price').innerText;
+    const quantity = card.querySelector('.quantity').innerText;
+
+    if (isSelected) {
+        alert(`Added ${quantity} of ${productName} to the cart for $${productPrice * quantity}`);
+    } else {
+        alert("Please select the product to add to the cart.");
+    }
+}
+
+</script>
+
+
+</body>
+
+</html>
