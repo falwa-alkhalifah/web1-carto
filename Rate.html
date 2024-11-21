@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="Style.css">
+    <title>Carto </title>
+	 <script src="script.js" defer></script>
+
+</head>
+<body>
+   <header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link ">Home</a></li>
+                <li><a href="Fashion.html" class="Link">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link">Seller</a></li>
+                <li><a href="User.html" class="Link active">User</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <div class="breadcrumb">
+            <a href="Home.html">Home</a> &gt; <a href="User.html">User</a> &gt; <a href="Cart.html">Cart</a>  &gt; <a href="Rate.html">Rate</a>
+        </div>
+		<hr>
+		 
+	<div class="review-page"> 
+        <label for="orderNumber">Select Order Number:</label>
+            <select  id="orderNumber" onchange="updateOrderDetails()">
+                <option value="">--Select Order--</option>
+                <option value="Order #1">Order #1</option>
+                <option value="Order #2">Order #2</option>
+                <option value="Order #3">Order #3</option>
+            </select>
+			
+			<div class="overall-rating">
+            <h2>Overall Rating:</h2>
+             <div class="rating">
+    <span class="star" data-value="1" onclick="setRating(1)"  >★</span>
+    <span class="star" data-value="2"  onclick="setRating(2)" >★</span>
+    <span class="star" data-value="3"  onclick="setRating(3)">★</span>
+    <span class="star" data-value="4"  onclick="setRating(4)" >★</span>
+    <span class="star" data-value="5"  onclick="setRating(5)" >★</span>
+        </div>
+        </div>
+               <div id="product-reviews"></div>
+        
+       
+		
+				
+
+        <button type="button" class="submit-btn" onclick="validateForm()">Submit Review</button>
+     </div>
+	</main>
+   
+  <footer> 
+    <div class="footer-content">
+   <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+       <div class="contact-us">
+           <h4>Contact Us</h4>
+           <p>+96659823459</p>
+           <p>Carto@gmail.com</p>
+       </div>
+        <div class="divider"></div>
+      <div class ="about-us">
+<h4>About us </h4> 
+<p>Our platform provides a secure and convenient shopping experience,
+    offering a wide range of products at competitive prices. Enjoy fast delivery,
+     flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+     All products come with an authenticity guarantee and quality warranty</p>
+     </div>
+</div>
+     <div class="social-icon">
+     <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+     <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+     <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+     <img src="images/instagram.png" alt="instagram" class="social-link">
+     </div>
+
+    
+   </footer>
+   <div class ="copyright">
+   &copy;2024 Carto All right reserved
+   </div>
+</body>
+</html>
