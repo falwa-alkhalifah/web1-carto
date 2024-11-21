@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="Style.css">
+    <title>Carto </title>
+   
+</head>
+<body>
+   <header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link ">Home</a></li>
+                <li><a href="Fashion.html" class="Link">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link">Seller</a></li>
+                <li><a href="User.html" class="Link active">User</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <div class="breadcrumb">
+            <a href="Home.html">Home</a> &gt; <a href="User.html">User</a> &gt; <a href="Cart.html">Cart</a>
+        </div>
+		
+		<hr>
+        
+        <section class="cart-container">
+            <div class="cart-items">
+            <div class="cart-item">
+                <img src="images/teshert.jpg" alt="Teshert Image">
+                <div class="item-info">
+                    <h3>Teshert</h3>
+                    <p> white Teshirt with small shipe in the middel.</p>
+                </div>
+                <div class="price">150</div>
+                <div class="quantity">
+				<label for="quantity1">Quantity:</label>
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <input type="number" id="quantity1" value="1">
+                    <button onclick="updateQuantity(this, 1)">+</button>
+					 
+                </div>
+                <button class="remove"onclick="removeItem(this)">Remove</button>
+            </div>
+			 
+            <div class="cart-item">
+                <img src="images/shoes.jpg" alt="shoes Image">
+                <div class="item-info">
+                    <h3>Shoes</h3>
+                    <p> A very comfrtable sport shoes.</p>
+                </div>
+                <div class="price">400</div>
+                <div class="quantity">
+				<label for="quantity2">Quantity:</label>
+                    <button onclick="updateQuantity(this,-1)">-</button>
+                    <input type="number" id ="quantity2" value="1">
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button class="remove" onclick="removeItem(this)">Remove</button>
+            </div>
+            <div class="cart-item">
+                <img src="images/sunglass.jpg" alt="sunglass Image">
+                <div class="item-info">
+                    <h3>sunglass</h3>
+                    <p> a modren sunglass protect your eyes from the sun.</p>
+                </div>
+                <div class="price">300</div>
+                <div class="quantity">
+				<label for="quantity3">Quantity:</label>
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <input type="number" id="quantity3" value="1">
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button class="remove" onclick="removeItem(this)">Remove</button>
+            </div>
+         <div class="cart-item">
+                <img src="images/teddybear.jpg" alt="teddy bear Image">
+                <div class="item-info">
+                    <h3>teddy bear</h3>
+                    <p> a bear toy for kids . </p>
+                </div>
+                <div class="price">50</div>
+                <div class="quantity">
+                    <button onclick="updateQuantity(this, -1)">-</button>
+					<label for="quantity4">Quantity:</label>
+                    <input type="number" id="quantity4" value="1">
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button class="remove" onclick="removeItem(this)">Remove</button>
+            </div> 
+			<div class="cart-item">
+                <img src="images/ring.jpg" alt="ring Image">
+                <div class="item-info">
+                    <h3>ring</h3>
+                    <p> ring for women  </p>
+                </div>
+                <div class="price">50</div>
+                <div class="quantity">
+				<label for="quantity5">Quantity:</label>
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <input type="number" id ="quantity5"value="1">
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button class="remove" onclick="removeItem(this)">Remove</button>
+            </div>
+            	<div class="cart-item">
+                <img src="images/bag.jpg" alt="bag Image">
+                <div class="item-info">
+                    <h3>bag</h3>
+                    <p>classy white bag for women  </p>
+                </div>
+                <div class="price">150</div>
+                <div class="quantity">
+				<label for="quantity6">Quantity:</label>
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <input type="number" id="quantity6" value="1">
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button class="remove" onclick="removeItem(this)">Remove</button>
+            </div>
+        </div>
+            <aside class="summary">
+                <h2  updateTotal()>1100</h2>
+                <p> harry before it's end from the stock</p>
+               <button onclick="checkOut()">Buy Now</button>
+
+                <button onclick="emptyCart()">Empty Cart</button>
+            </aside>
+        </section>
+		
+    </main>
+ 
+    <footer> 
+    <div class="footer-content">
+   <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+       <div class="contact-us">
+           <h4>Contact Us</h4>
+           <p>+96659823459</p>
+           <p>Carto@gmail.com</p>
+       </div>
+        <div class="divider"></div>
+      <div class ="about-us">
+<h4>About us </h4> 
+<p>Our platform provides a secure and convenient shopping experience,
+    offering a wide range of products at competitive prices. Enjoy fast delivery,
+     flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+     All products come with an authenticity guarantee and quality warranty</p>
+     </div>
+</div>
+     <div class="social-icon">
+     <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+     <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+     <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+     <img src="images/instagram.png" alt="instagram" class="social-link">
+     </div>
+
+    
+   </footer>
+   <div class ="copyright">
+   &copy;2024 Carto All right reserved
+   </div>
+	 <script>
+       
+			function updateQuantity(button, change) {
+            const input = button.parentNode.querySelector('input[type="number"]');
+            let quantity = parseInt(input.value) + change;
+            if (quantity >= 1) { 
+                input.value = quantity;
+                updateTotal();
+            } else {
+                input.value = 1; 
+            }
+			}
+
+  function removeItem(button) {
+            button.parentNode.remove();
+            updateTotal();
+        }
+
+       
+        function emptyCart() {
+            document.querySelector('.cart-items').innerHTML = '';
+            updateTotal();
+        }
+
+       
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const price = parseFloat(item.querySelector('.price').textContent);
+                const quantity = parseInt(item.querySelector('input[type="number"]').value);
+                total += price * quantity;
+            });
+            document.querySelector('.summary h2').textContent = total.toFixed(2);
+        }
+
+       
+         function checkOut() {
+        const total = document.querySelector('.summary h2').textContent;
+        // 
+        const confirmationMessage = document.createElement('div');
+        confirmationMessage.classList.add('confirmation-message');
+        confirmationMessage.textContent = `Total cost: ${total} - Thank you for your purchase!`;
+        document.body.appendChild(confirmationMessage); 
+
+        confirmationMessage.style.position = 'fixed';
+        confirmationMessage.style.top = '50%';
+        confirmationMessage.style.left = '50%';
+        confirmationMessage.style.transform = 'translate(-50%, -50%)';
+        confirmationMessage.style.backgroundColor = '#4CAF50';
+        confirmationMessage.style.color = 'white';
+        confirmationMessage.style.padding = '55px';
+        confirmationMessage.style.borderRadius = '5px';
+        confirmationMessage.style.fontSize = '18px';
+        confirmationMessage.style.textAlign = 'center';
+        confirmationMessage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        setTimeout(function() {
+            window.location.href = 'Rate.html';
+        }, 2000);  
+    }
+    </script>
+</body>
+</html>
