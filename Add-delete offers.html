@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Delete offers-Carto</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  
+    <header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link">Home</a></li>
+                <li><a href="Fashion.html" class="Link">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link active">Seller</a></li>
+                <li><a href="User.html" class="Link">User</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="Home.html">Home</a> &gt; 
+        <a href="Seller.html">Seller</a> &gt; 
+        <a href="Add-delete offers.html">Add/Delete Offers</a>
+    </div>
+    <hr>
+
+  
+    <main>
+    
+        
+        <!-- Add Offer Form -->
+        <section class="Add-Offer">
+            <form id="addOfferForm">
+                <div>
+                    <label for="Offer-Name">Offer Name</label><br>
+                    <input type="text" id="Offer-Name" name="OfferName" required>
+                </div>
+                <br>
+                <div id="OfferPic">
+                    <label for="myfile">Offer Picture</label><br>  <br><br>
+                    <input type="file" id="myfile" name="myfile" accept="image/*" required>
+                </div>
+                <br><br><br>
+                <div>
+                    <label for="offerD">Offer Description</label><br>
+                    <textarea id="offerD" name="offerDescription" rows="4" cols="50" required>Write your Product Description here!</textarea>
+                </div>
+                <br>
+                <button type="button" onclick="addOffer()">+ Add Offer</button>
+            </form>
+        </section>
+
+        <!-- Available Offers Section -->
+        <h2>Available Offers</h2>
+        <div class="All-Offer" id="offersContainer"></div>
+        <button type="button" onclick="deleteSelected()">- Delete Selected Offers</button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer> 
+        <div class="footer-content">
+            <img src="images/loge-bg.png" alt="Cart Logo" class="logo">
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <p>+96659823459</p>
+                <p>Carto@gmail.com</p>
+            </div>
+            <div class="divider"></div>
+            <div class="about-us">
+                <h4>About Us</h4>
+                <p>Our platform provides a secure and convenient shopping experience,
+                    offering a wide range of products at competitive prices. Enjoy fast delivery,
+                    flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support. 
+                    All products come with an authenticity guarantee and quality warranty.</p>
+            </div>
+        </div>
+        <div class="social-icon">
+            <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+            <img src="images/Tiktok.png" alt="TikTok" class="social-link">
+            <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+            <img src="images/instagram.png" alt="Instagram" class="social-link">
+        </div>
+    </footer>
+    <div class="copyright">
+        &copy;2024 Carto All rights reserved
+    </div>
+
+  
+    <script>
+
+        var offers = [
+            { name: "Half Price", description: "50% off on selected collections.", imgSrc: "images/Half price.png" },
+            { name: "Black Friday Sale", description: "Unbeatable deals on everything!", imgSrc: "images/Black Friday.png" },
+            { name: "BIG OFFER!", description: "Buy two, get one free!", imgSrc: "images/Bigoffers.png" }];
+
+
+
+function renderOffers() {
+    let offersContainer = document.getElementById("offersContainer");
+    offersContainer.innerHTML = ""; 
+
+    for (let i = 0; i < offers.length; i++) {
+        offersContainer.innerHTML += `
+            <div class="offer">
+                <img src="${offers[i].imgSrc}" alt="${offers[i].name}" class="offerimage">
+                <div class="offerdetails">
+                    <h3>${offers[i].name}</h3>
+                    <p>${offers[i].description}</p>
+                </div>
+                <label>
+                    <input type="checkbox" value="${i}" class="offerbox"> Select
+                </label>
+            </div>
+        `;
+    }
+}
+
+        renderOffers();
+
+        //addOffer
+        function addOffer() {
+            
+            const name = document.getElementById("Offer-Name").value.trim();
+            const imageInput = document.getElementById("myfile");
+            const description = document.getElementById("offerD").value.trim();
+            
+          
+            if (!name || !description || !imageInput.files.length) {
+                alert("Please fill in all fields to add a new offer.");
+                return;
+            }
+
+         
+            const newOffer = {
+                name: name,
+                description: description,
+                imgSrc: URL.createObjectURL(imageInput.files[0])
+            };
+            offers.push(newOffer);
+            renderOffers(); 
+            alert("New offer added successfully.");
+            document.getElementById("addOfferForm").reset(); 
+        }
+
+    //deleteSelected
+
+        function deleteSelected() {
+            const checkboxes = document.querySelectorAll(".offerbox:checked");
+            if (checkboxes.length === 0) {
+                alert("Please select at least one offer.");
+                return;
+            }
+
+            if (confirm("Are you sure you want to delete the selected offers?")) {
+    const selectedIndexes = []; 
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            selectedIndexes.push(parseInt(checkboxes[i].value));
+        }
+    }
+
+    for (let i = selectedIndexes.length - 1; i >= 0; i--) {
+        offers.splice(selectedIndexes[i], 1); // Remove the offer 
+    }
+    
+    renderOffers(); 
+    alert("Selected offers deleted successfully.");
+}
+
+        }
+    </script>
+</body>
+</html>
