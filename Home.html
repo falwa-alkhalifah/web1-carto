@@ -1,0 +1,216 @@
+<!DOCTYPE HTML >
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carto</title>
+        <link rel="stylesheet" href="style.css">
+       
+            <script>
+               
+            // Function to display the current week's start date
+            function displayWeekStart() {
+                const currentDate = new Date();
+                const weekStart = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay()));
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('week-start-date').innerText = `Week starting: ${weekStart.toLocaleDateString('en-US', options)}`;
+            }
+
+            // Function to display additional offers
+            function showMoreOffers() {
+                const moreOffers = document.querySelectorAll('.offer-hidden');
+                moreOffers.forEach(offer => offer.style.display = 'block');
+                document.getElementById('more-offers-btn').style.display = 'none';
+            }
+            
+            
+            // Run the functions on window load
+            window.onload = function() {
+                displayWeekStart();
+                addReviewHoverEffect();
+            };
+            </script>
+            
+    </head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav >
+            <ul>
+                <li><a href="Home.html" class="Link active">Home</a></li>
+                <li><a href="Fashion.html" class="Link">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link">Seller</a></li>
+                <li><a href="User.html" class="Link">User</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="breadcrumb">
+    <a href="Home.html">Home</a>
+</div>
+
+<hr>
+<main>
+    <h3 id="week-start-date"></h3> <!--for script-->
+
+    <button id="theme-toggle">Customize</button>
+    
+    <div class="full-container">
+        <div class="flex-container">
+            
+            <div class="box">
+           <img src="images/Shoes-m.png" alt="" class="imgs">
+            <p>Buy one pair of shoes,<br> and get the second one at half<br> price on the cheaper item. </p>
+        </div>
+
+         <div id="welc">
+        <h2>Welcome to Carto!</h2>
+    <p><em>Shopping with us means discovering unique creations and supporting passionate individuals.</em><br> Together, we celebrate originality and bring inspiring products to you. Discover our collection of clothes, accessories, and toys, designed to bring style, fun, and comfort to your life. Whatever you're looking for, 
+	we have something special just for you. Happy shopping, and thank you for choosing us!</p>
+       </div>
+   
+ 
+    
+        <div class="box" id="right">
+            <img src="images/Tshirt.png" alt="" class="imgs" >
+            <p>Hurry! black friday sales has started<br>50% off on everything !!</p>
+        </div>
+      
+
+</div>
+  <br>
+  <div class="box offer-hidden" style="display: none;"><!--this div for script--> <!-- Hidden offers --> 
+    <!-- additional content for more offers -->
+
+
+    <div class="container2">
+        <div class="box" >
+            <img src="images/Glasses-m.png" alt="" class="imgs">
+            <p>reach 300SR purchase<br>and get a free glasses<br>based on your choice </p>
+        </div>
+        
+        <div class="box">
+            <img src="images/toy-m.jpg" alt="" class="imgs">
+            <p>buy 3 toys and get 2 for free<br>for your kids</p>
+        </div>
+        <div class="box">
+            <img src="images/necklace-m.jpg" alt="" class="imgs">
+            <p>Don't miss out 20% offon all <br>accessories-they are the key<br>to a standout style!</p>
+        </div>
+        <div class="box">
+            <img src="images/free delivery.jpg" alt="" class="imgs">
+            <p>pass 500SR purchase<br>and get free delivery!!</p>
+        </div>
+        
+    </div>
+  </div>
+  <button id="more-offers-btn" onclick="showMoreOffers()">More</button> 
+</div>
+<br>
+
+ <h3>Customer reviews</h3>
+<div class="review-container">
+
+    <!-- Review 1 -->
+    <div class="review-card" data-name="haya ahmed"data-product="Pearl Necklace" data-rate="5" data-feedback="Absolutely love this pearl necklace!.">
+      <img src="images/neck.jpg" alt="Pearl Necklace" class="product-photo">
+      <div class="review-content">
+        <p class="product-name-H">Elegant Pearl Necklace</p>
+        <div class="rating-H">★★★★★</div>
+        <p class="feedback-H">"Absolutely love this pearl necklace! It adds the perfect touch of elegance to any outfit. Great quality and beautiful finish."</p>
+      </div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card" data-name="noura_j" data-product="Sporty Sneakers" data-rate="4" data-feedback="Very comfortable and lightweight sneakers.">
+      <img src="images/shose.jpg" alt="Sporty Sneakers" class="product-photo">
+      <div class="review-content">
+        <p class="product-name-H">Sporty Running Sneakers</p>
+        <div class="rating-H">★★★★☆</div>
+        <p class="feedback-H">"Very comfortable and lightweight sneakers. Perfect for running, though the size was slightly larger than expected. Still a great buy!"</p>
+      </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card" data-name="sarah khalid" data-product="Wooden Elephant Toy" data-rate="5" data-feedback="My kids adore this elephant toy! .Highly recommend for toddlers!.">
+      <img src="images/toy3.png" alt="Wooden Elephant Toy" class="product-photo">
+      <div class="review-content">
+        <p class="product-name-H">Colorful Wooden Elephant Toy</p>
+        <div class="rating-H">★★★★★</div>
+        <p class="feedback-H">"My kids adore this elephant toy! It's sturdy, colorful, and keeps them entertained for hours. Highly recommend for toddlers!."</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="hover-details" id="hover-details"></div>
+  <script>
+    const reviewCards = document.querySelectorAll('.review-card');
+    const hoverDetails = document.getElementById('hover-details');
+
+    reviewCards.forEach((reviewCard) => {
+      reviewCard.addEventListener('mouseover', (e) => {
+        const { name, product, rate, feedback } = reviewCard.dataset;
+
+        // Update hover details content
+        hoverDetails.innerHTML = `
+          <strong>Customer:</strong> ${name}<br>
+          <strong>Product:</strong> ${product}<br>
+          <strong>Rating:</strong> ${rate} stars<br>
+          <strong>Feedback:</strong> ${feedback}
+        `;
+
+        // Position the hover details
+        const rect = reviewCard.getBoundingClientRect();
+        hoverDetails.style.top = `${window.scrollY + rect.bottom + 10}px`;
+        hoverDetails.style.left = `${rect.left}px`;
+
+        // Display the hover details
+        hoverDetails.style.display = 'block';
+      });
+
+      reviewCard.addEventListener('mouseout', () => {
+        hoverDetails.style.display = 'none';
+      });
+    });
+  </script>
+</main>
+
+<footer> 
+    <div class="footer-content">
+   <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+       <div class="contact-us">
+           <h4>Contact Us</h4>
+           <p>+96659823459</p>
+           <p>Carto@gmail.com</p>
+       </div>
+        <div class="divider"></div>
+      <div class ="about-us">
+<h4>About us </h4> 
+<p>Our platform provides a secure and convenient shopping experience,
+    offering a wide range of products at competitive prices. Enjoy fast delivery,
+     flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+     All products come with an authenticity guarantee and quality warranty</p>
+     </div>
+</div>
+     <div class="social-icon">
+     <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+     <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+     <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+     <img src="images/instagram.png" alt="instagram" class="social-link">
+     </div>
+
+    
+   </footer>
+   <div class ="copyright">
+   &copy;2024 Carto All right reserved
+   </div>
+
+
+
+</body>
+
+</html>
