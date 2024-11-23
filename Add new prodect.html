@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Carto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link">Home</a></li>
+                <li><a href="Fashoin.html" class="Link">Fashoin</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link active">Seller</a></li>
+                <li><a href="User.html" class="Link">User</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="Home.html">Home</a> &gt; <a href="Seller.html">Seller</a> &gt; <a href="Add new prodect.html">Add new Product</a> 
+    </div>
+    <hr>
+    <main>
+        <h2 id="prodect-photo">Add New Prodect:</h2>
+        <br><br><br>
+        <div class="Product-Pictures">
+            <div class="image-slot">
+                <img src="images/shose.jpg" alt="shoes" style="width: 150px;">
+            </div>
+            <div class="image-slot">
+                <img src="images/T-shirt.jpg" alt="T-shirt" style="width: 150px;">
+            </div>
+            <div class="image-slot">
+                <img src="images/jacket.jpeg" alt="jacket" style="width: 150px;">
+            </div>
+            <div class="image-slot">
+                <img src="images/toy3.png" alt="Toys" style="width: 150px;">
+            </div>
+        </div>
+
+        <form id="productForm" enctype="multipart/form-data">
+            <label for="button1">Add Photo</label>
+            <input type="file" name="productPhoto" id="button1" >
+
+            <div class="inputProduct">
+                <div class="group">
+                    <label>Product Name:<input type="text" id="productName" ></label>
+                </div>
+
+                <div class="group">
+                    <label>Product Price:<input type="text" id="productPrice" ></label>
+                </div>
+
+                <div class="group">
+                    <label>Product Quantity:<input type="number" name="productQuantity" id="productQuantity" ></label>
+                </div>
+
+                <div class="group">
+                    <label for="productCategory">Product Category:</label>
+                    <select id="productCategory" ><!---->
+                        <option value="Fashion">Fashion</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Toys">Toys</option>
+                    </select>
+                </div>
+
+                <div class="group">
+                    <label>Product Description:<textarea name="ProductD" rows="4" cols="40" id="productDescription" >Write your Product Description here!</textarea></label>
+                </div>
+
+                <div class="group">
+                    <button type="submit">Add</button>
+                </div>
+            </div>
+        </form>
+
+        <br><br><br><br>
+    </main>
+
+    <footer> 
+        <div class="footer-content">
+           <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+           <div class="contact-us">
+               <h4>Contact Us</h4>
+               <p>+96659823459</p>
+               <p>Carto@gmail.com</p>
+           </div>
+            <div class="divider"></div>
+          <div class="about-us">
+            <h4>About us </h4> 
+            <p>Our platform provides a secure and convenient shopping experience,
+                offering a wide range of products at competitive prices. Enjoy fast delivery,
+                 flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+                 All products come with an authenticity guarantee and quality warranty</p>
+         </div>
+        </div>
+        <div class="social-icon">
+            <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+            <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+            <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+            <img src="images/instagram.png" alt="instagram" class="social-link">
+        </div>
+    </footer>
+
+    <div class="copyright">
+        &copy;2024 Carto All right reserved
+    </div>
+
+    <script>
+      document.querySelector("#productForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const productName = document.querySelector('#productName').value.trim();
+    const productPrice = document.querySelector('#productPrice').value.trim();
+    const productQuantity = document.querySelector('#productQuantity').value.trim();
+    const productCategory = document.getElementById("productCategory").value;
+    const productDescription = document.querySelector('#productDescription').value.trim();
+    const productPhotoInput = document.querySelector('#button1');
+
+    let valid = true;
+    let errorMessage = '';
+
+    // Validate inputs
+    if (!productName) {
+        errorMessage += 'Product name is required.\n';
+        valid = false;
+    } else if (/^\d/.test(productName)) {
+        errorMessage += 'Product name cannot start with a number.\n';
+        valid = false;
+    }
+
+    if (!productPrice || isNaN(productPrice)) {
+        errorMessage += 'Product price must be a valid number.\n';
+        valid = false;
+    }
+
+    if (!productQuantity || isNaN(productQuantity) || productQuantity <= 0) {
+        errorMessage += 'Product quantity must be a valid number greater than zero.\n';
+        valid = false;
+    }
+
+    if (!productDescription) {
+        errorMessage += 'Product description is required.\n';
+        valid = false;
+    }
+
+    if (!productPhotoInput.files[0]) {
+        errorMessage += 'Product photo is required.\n';
+        valid = false;
+    }
+
+    // Show error message 
+    if (!valid) {
+        alert(errorMessage);
+        return;
+    }
+
+    // Read the photo file as a Base64 URL
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const productPhoto = e.target.result; 
+        // Create new product object
+        const newProduct = {
+            name: productName,
+            price: parseFloat(productPrice),
+            quantity: parseInt(productQuantity),
+            category: productCategory,
+            description: productDescription,
+            photo: productPhoto 
+        };
+
+        let products = JSON.parse(localStorage.getItem("products")) || [];
+        products.push(newProduct); // Add the new product to the array
+        localStorage.setItem("products", JSON.stringify(products)); // Save back to local storage
+
+        alert(`Product "${productName}" added successfully!`);
+
+       
+        document.querySelector("#productForm").reset();
+
+        
+        window.location.href = "Seller.html";
+    };
+
+    reader.readAsDataURL(productPhotoInput.files[0]); // Read the file
+});
+
+    </script>
+</body>
+</html>
