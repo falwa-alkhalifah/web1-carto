@@ -195,6 +195,11 @@ function setRating(rating) {
 function setActiveStar(starElement) {
           starElement.classList.add('active');
         }
-
+ window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
 
 
