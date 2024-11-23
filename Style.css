@@ -264,6 +264,7 @@ margin:40px;
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
+	background-color: #f9f9f9; 
 } 
 #welc{ 
         text-align: center; 
@@ -273,6 +274,9 @@ margin:40px;
     text-align: center;  
 } 
 .review-container { 
+	 display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 800px; 
     margin: auto; 
   } 
@@ -284,6 +288,7 @@ margin:40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     display: flex; 
     align-items: flex-start; 
+	     position: relative;
   } 
   .product-photo { 
     width: 120px; 
@@ -294,19 +299,37 @@ margin:40px;
   .review-content { 
     flex: 1; 
   } 
-  .product-name { 
+  .product-name-H { 
     font-size: 18px; 
     font-weight: bold; 
     margin: 0 0 5px; 
   } 
-  .rating { 
+  .rating-H { 
     color: #FFD700; 
     margin-bottom: 10px; 
   } 
-  .feedback { 
+  .feedback- { 
     font-size: 14px; 
     color: #555; 
-  } 
+  }
+
+.hover-details {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    display: none; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-family: 'Georgia', serif; 
+    font-size: 14px; 
+    text-align: left; 
+    color: #333; 
+    line-height: 1.6; 
+   
+  }
+
 /* home page body end */ 
 /* seller body start */ 
 .Products-sell{ 
