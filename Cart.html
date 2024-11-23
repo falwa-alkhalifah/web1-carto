@@ -125,8 +125,8 @@
             </div>
         </div>
             <aside class="summary">
-                <h2  updateTotal()>1100</h2>
-                <p> harry before it's end from the stock</p>
+                <h2  style="color: black;" updateTotal()>1100</h2>
+                <p  style="color: black;"> harry before it's end from the stock</p>
                <button onclick="checkOut()">Buy Now</button>
 
                 <button onclick="emptyCart()">Empty Cart</button>
@@ -223,6 +223,12 @@
             window.location.href = 'Rate.html';
         }, 2000);  
     }
+		  window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
     </script>
 </body>
 </html>
