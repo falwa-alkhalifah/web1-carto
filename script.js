@@ -183,7 +183,7 @@ function validateForm() {
 
 
 function setRating(rating) {
-    const stars = document.querySelectorAll('.star');  // Get all star labels
+    const stars = document.querySelectorAll('.star');      
     stars.forEach((star, index) => {
         if (index < rating) {
             star.classList.add('active');  // Add 'active' class to the selected stars
@@ -193,8 +193,12 @@ function setRating(rating) {
     });
 }
 function setActiveStar(starElement) {
-          starElement.classList.add('active');
-        }
+      if (starElement.classList.contains('active')) {
+        starElement.classList.remove('active'); 
+      } else {
+        starElement.classList.add('active');  
+      }
+    }
  window.onload = function() {
            
             if (localStorage.getItem('theme') === 'dark') {
