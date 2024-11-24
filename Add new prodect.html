@@ -113,6 +113,12 @@
     </div>
 
     <script>
+        window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
       document.querySelector("#productForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
 
