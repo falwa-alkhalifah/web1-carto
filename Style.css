@@ -521,11 +521,32 @@ header img.logo, footer img.logo {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 	color: black; 
 } 
-.cart-item img { 
-    width: 150px; 
-    height: 150px; 
-    margin-right: 15px; 
+ @media (max-width: 600px) {
+            img {
+                 width: 80px; 
+    height: 80px; 
+	  margin-right: 15px; 
 }
+            }
+        }
+
+        
+        @media (min-width: 601px) and (max-width: 1024px) {
+            img {
+                 width: 100px; 
+    height: 100px; 
+	  margin-right: 15px; 
+            }
+        }
+
+        
+        @media (min-width: 1025px) {
+            img {
+                 width: 120px; 
+    height: 120px; 
+	  margin-right: 15px; 
+            }
+        } 
 .item-info { 
     flex: 1; 
 } 
