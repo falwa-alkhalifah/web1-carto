@@ -94,6 +94,12 @@
 
   
     <script>
+        window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
 
         var offers = [
             { name: "Half Price", description: "50% off on selected collections.", imgSrc: "images/Half price.png" },
