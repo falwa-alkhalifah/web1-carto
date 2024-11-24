@@ -416,6 +416,10 @@ color: balck;
 body.dark-theme .buttons a{
                 color:white;
             }
+ body.dark-theme .buttons a:hover { 
+                color: black; 
+                } 
+
 /* seller body end */ 
 
 /*----------------footer*/ 
