@@ -504,6 +504,15 @@ header img.logo, footer img.logo {
     height: 100px; 
     margin-right: 10px; 
    } 
+  body.dark-theme {
+            background-color: #2C2C2C;
+            color: white;
+			
+        }
+		 body.dark-theme button {
+            background-color: #555;
+            color: #fff;
+        }
 /*------------------Afyya------------------ */
 
 .cart-container { 
