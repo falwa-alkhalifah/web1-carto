@@ -254,6 +254,7 @@ margin:40px;
   border-radius: 15px;  
   background-color:#fff; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+	color: black;
 } 
 .imgs{ 
     width: 240px; 
@@ -265,6 +266,7 @@ margin:40px;
     flex-direction: row; 
     justify-content: space-between;
 	background-color: #f9f9f9; 
+	color: black;
 } 
 #welc{ 
         text-align: center; 
@@ -279,6 +281,7 @@ margin:40px;
     gap: 10px;
     width: 800px; 
     margin: auto; 
+	color: black;
   } 
   .review-card {
     background-color: #fff; 
