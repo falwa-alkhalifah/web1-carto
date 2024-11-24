@@ -221,6 +221,9 @@ body {
     text-decoration: none;
    color:rgb(67, 62, 62) ;
 }
+ body.dark-theme .breadcrumb a{
+        color: white;
+    }
 .order-details {
 display: flex; 
 flex-direction:column; 
