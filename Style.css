@@ -350,6 +350,7 @@ color: balck;
     margin-top: 40px; 
     overflow-x: auto; 
     white-space: nowrap; 
+	color: black;
 }
     .Product-box{ 
     border: 2px solid whitesmoke; 
