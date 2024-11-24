@@ -413,6 +413,9 @@ color: balck;
     .buttons a:hover { 
     background-color: #f0f0f0; 
     } 
+body.dark-theme .buttons a{
+                color:white;
+            }
 /* seller body end */ 
 
 /*----------------footer*/ 
