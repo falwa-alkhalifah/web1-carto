@@ -173,7 +173,7 @@ const product = {
 
 // إضافة العنصر إلى السلة
 cart.push(product);
-localStorage.setItem('cart', JSON.stringify(cart));
+localStorage.setItem('purchasedItems', JSON.stringify(cart)); 
 localStorage.removeItem('cart'); // إفراغ السلة بعد الشراء
   
         setTimeout(function() {
