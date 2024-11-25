@@ -1,14 +1,18 @@
 function validateForm() {
-  
-    const stars = document.querySelectorAll('.overall-rating .rating .star'); // لتحديد النجوم فقط في الـ overall-rating
+   function validateForm() {
+    const stars = document.querySelectorAll('.overall-rating .rating .star'); 
+	const orderNumber = document.getElementById('orderNumber').value.trim();
     let selectedRating = 0;
-	 const comment = document.getElementById('bag-comments').value;
-// Find the selected rating from active stars
+
     stars.forEach((star, index) => {
         if (star.classList.contains('active')) { 
             selectedRating = index + 1;
         }
     });
+	if (!orderNumber) {
+        alert('Please enter your Order Number.');
+        return false;
+    }
 
    
 
@@ -17,18 +21,11 @@ function validateForm() {
         alert("Please choose a rating score.");
         return false;
     }
-	if (comment.trim() === "") {
-        alert("Please add a comment.");
-        return;
-    }
-
-    // If valid, show feedback
-    alert(`Thank you for your feedback!\nYour Overall rating for your order is ${selectedRating} star(s).`);
-    window.location.href = "Home.html"; // Redirect to Home page
+   
+		localStorage.removeItem('purchasedItems');
+    alert(`Thank you for your feedback!\nYour Overall rating for ${orderNumber }  is ${selectedRating} star(s).`);
+    window.location.href = "Home.html"; // Redirect to Home page     
 }
-       
-	
-
 
 
 function setRating(rating) {
@@ -55,16 +52,16 @@ function setRating(rating) {
             }
         };
 
-
- loadPurchasedItems();
+loadPurchasedItems();
  function loadPurchasedItems() {
-            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
-            const itemsContainer = document.getElementById('rating-items');
+    const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+    const itemsContainer = document.getElementById('rating-items');
 
-            if (purchasedItems.length === 0) {
-                itemsContainer.innerHTML = '<p>No products to rate.</p>';
-                return;
-            }
+    if (purchasedItems.length === 0) {
+        itemsContainer.innerHTML = '<p>No products to rate.</p>';
+        return;
+    }
+
     purchasedItems.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('rate-card');
@@ -72,7 +69,10 @@ function setRating(rating) {
             <div class="rate-card-header">
                 <p><strong>${item.name}</strong> - ${item.price} SAR</p>
             </div>
-            <div class="rate-card-rating">
+            <div class="rate-card-image">
+                <img src="${item.image}" alt="${item.name}" style="max-width: 100px; max-height: 100px;">
+            </div>
+            <div class="rating">
                 <label class="star" onclick="setActiveStar(this)">★</label>
                 <label class="star" onclick="setActiveStar(this)">★</label>
                 <label class="star" onclick="setActiveStar(this)">★</label>
@@ -85,4 +85,3 @@ function setRating(rating) {
         itemsContainer.appendChild(itemDiv);
     });
 }
-
