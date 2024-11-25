@@ -3,6 +3,10 @@
 <head>
     <title>Carto</title>
     <link rel="stylesheet" href="style.css">
+    <title>Add new prodect-Carto</title>
+
+            <script src="script.js" defer></script>
+
 </head>
 <body>
 
@@ -31,21 +35,21 @@
         <br><br><br>
         <div class="Product-Pictures">
             <div class="image-slot">
-                <img src="images/shose.jpg" alt="shoes" style="width: 150px;">
+                <img src="images/shose.jpg" alt="shoes" style="width: 150px; height: 130px;">
             </div>
             <div class="image-slot">
-                <img src="images/T-shirt.jpg" alt="T-shirt" style="width: 150px;">
+                <img src="images/T-shirt.jpg" alt="T-shirt" style="width: 150px;  height: 130px;">
             </div>
             <div class="image-slot">
-                <img src="images/jacket.jpeg" alt="jacket" style="width: 150px;">
+                <img src="images/jacket.jpeg" alt="jacket" style="width: 150px;  height: 130px;">
             </div>
             <div class="image-slot">
-                <img src="images/toy3.png" alt="Toys" style="width: 150px;">
+                <img src="images/toy3.png" alt="Toys" style="width: 150px;  height: 130px;">
             </div>
         </div>
 
         <form id="productForm" enctype="multipart/form-data">
-            <label for="button1">Add Photo</label>
+          
             <input type="file" name="productPhoto" id="button1" >
 
             <div class="inputProduct">
@@ -113,11 +117,11 @@
     </div>
 
     <script>
-        window.onload = function() {
+         window.onload = function() {
            
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-theme');
-            }
+           if (localStorage.getItem('theme') === 'dark') {
+               document.body.classList.add('dark-theme');
+           }
         };
       document.querySelector("#productForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
