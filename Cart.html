@@ -139,7 +139,7 @@
     }
 
     // Function to handle checkout
-    function checkOut() {
+     function checkOut() {
         const total = document.getElementById('total-price').textContent;
         const confirmationMessage = document.createElement('div');
         confirmationMessage.classList.add('confirmation-message');
@@ -157,9 +157,18 @@
         confirmationMessage.style.fontSize = '18px';
         confirmationMessage.style.textAlign = 'center';
         confirmationMessage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-       
-	  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-localStorage.setItem('purchasedItems', JSON.stringify(cart)); // تخزين المنتجات المشتراة
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const product = {
+    name: 'Product Name',
+    price: 100,
+    description: 'Description of the product',
+    quantity: 1,
+    image: 'path/to/product-image.jpg' // رابط الصورة
+};
+
+// إضافة العنصر إلى السلة
+cart.push(product);
+localStorage.setItem('cart', JSON.stringify(cart));
 localStorage.removeItem('cart'); // إفراغ السلة بعد الشراء
   
         setTimeout(function() {
