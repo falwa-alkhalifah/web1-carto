@@ -23,6 +23,8 @@
             </ul>
         </nav>
     </header>
+ 
+
 <main>
         <div class="breadcrumb">
             <a href="Home.html">Home</a> &gt; <a href="User.html">User</a> &gt; <a href="Cart.html">Cart</a>  &gt; <a href="Rate.html">Rate</a>
@@ -30,14 +32,11 @@
 		<hr>
 		 
 	<div class="review-page"> 
-        <label for="orderNumber">Select Order Number:</label>
-            <select  id="orderNumber" onchange="updateOrderDetails()">
-                <option value="">--Select Order--</option>
+       <label for="orderNumber">Select Order Number:</label>
+	   <select  id="orderNumber" >
+			<option value="">--Select Order--</option>
                 <option value="Order #1">Order #1</option>
-                <option value="Order #2">Order #2</option>
-                <option value="Order #3">Order #3</option>
-            </select>
-			
+				</select>
 			<div class="overall-rating">
             <h2>Overall Rating:</h2>
              <div class="rating">
@@ -48,8 +47,12 @@
     <span class="star" data-value="5"  onclick="setRating(5)" >★</span>
         </div>
         </div>
-               <div id="product-reviews"></div>
-        
+		<div id="rating-items"></div>
+                <h3> Other Ratings:</h3> 
+                    <div class="rate-card">
+                                <div class="rating">
+								</div>
+								</div>
        
 		
 				
