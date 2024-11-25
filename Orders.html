@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carto</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+
+  <header>
+        <div class="header-content">
+            <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" class="Link">Home</a></li>
+                <li><a href="Fashion.html" class="Link">Fashion</a></li>
+                <li><a href="Accessories.html" class="Link">Accessories</a></li>
+                <li><a href="Toys.html" class="Link">Toys</a></li>
+                <li><a href="Seller.html" class="Link">Seller</a></li>
+                <li><a href="User.html" class="Link active">User</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+<div class="breadcrumb">
+    <a href="Home.html">Home</a> &gt; <a href="User.html">User</a> &gt; <a href="Orders.html">Orders</a>
+</div>
+
+<hr>
+  
+  
+  <main>
+    <!-- Orders page content -->
+    <div class="order-details">
+      <div class="order-number">
+        <h3>Order #GD8950</h3>
+		<p><b>Total:</b> 44.98$</p>
+        <p><b>Order Time:</b> 2024/10/12 14:55:56</p>
+      </div>
+	  
+	 
+      <div class="order-number">
+        <h3>Order #GF9921</h3>
+		<p><b>Total:</b> 139.12$</p>
+        <p><b>Order Time:</b> 2024/09/25 19:37:21</p>
+      </div>
+	  
+	  
+	  
+      <div class="order-number">
+        <h3>Order #FB3710</h3>
+		<p><b>Total:</b> 221.66$</p>
+        <p><b>Order Time:</b> 2024/09/16 22:12:33</p>
+      </div>
+	  
+	  
+      <div class="order-number">
+        <h3>Order #CN7544</h3>
+		<p><b>Total:</b> 72.18$</p>
+        <p><b>Order Time:</b> 2024/08/20 15:39:11</p>
+      </div>
+      <!-- Add more order details as needed -->
+    </div>
+</main>
+    <footer> 
+    <div class="footer-content">
+   <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+       <div class="contact-us">
+           <h4>Contact Us</h4>
+           <p>+96659823459</p>
+           <p>Carto@gmail.com</p>
+       </div>
+        <div class="divider"></div>
+      <div class ="about-us">
+<h4>About us </h4> 
+<p>Our platform provides a secure and convenient shopping experience,
+    offering a wide range of products at competitive prices. Enjoy fast delivery,
+     flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+     All products come with an authenticity guarantee and quality warranty</p>
+     </div>
+</div>
+     <div class="social-icon">
+     <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+     <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+     <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+     <img src="images/instagram.png" alt="instagram" class="social-link">
+     </div>
+
+    
+   </footer>
+   <div class ="copyright">
+   &copy;2024 Carto All right reserved
+   </div>
+	
+	
+ 
+<script>
+
+window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
+</script>
+ 
+</body>
+</html>
