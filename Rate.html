@@ -47,14 +47,13 @@
     <span class="star" data-value="5"  onclick="setRating(5)" >★</span>
         </div>
         </div>
-		<div id="rating-items"></div>
-                <h3> Other Ratings:</h3> 
-                    <div class="rate-card">
-                                <div class="rating">
-								</div>
-								</div>
-       
 		
+                <h3> Other Ratings:</h3> 
+				<div id="rating-items">
+                    <div class="rate-card">
+                                <div class="rating"> </div></div>
+       
+		</div>
 				
 
         <button type="button" class="submit-btn" onclick="validateForm()">Submit Review</button>
@@ -90,7 +89,7 @@
    <div class ="copyright">
    &copy;2024 Carto All right reserved
    </div>
-</script>
+<script>
 function validateForm() {
   
     const stars = document.querySelectorAll('.overall-rating .rating .star'); // لتحديد النجوم فقط في الـ overall-rating
@@ -164,6 +163,9 @@ function setRating(rating) {
         itemDiv.innerHTML = `
             <div class="rate-card-header">
                 <p><strong>${item.name}</strong> - ${item.price} SAR</p>
+            </div>
+            <div class="rate-card-image">
+                <img src="${item.image}" alt="${item.name}" style="max-width: 100px; max-height: 100px;">
             </div>
             <div class="rate-card-rating">
                 <label class="star" onclick="setActiveStar(this)">★</label>
