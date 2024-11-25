@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carto</title>
+  <link rel="stylesheet" href="Style.css">
+  
+ <script src="script.js" defer></script>
+  
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="Home.html" class="Link">Home</a></li>
+      <li><a href="Fashion.html" class="Link">Fashion</a></li>
+      <li><a href="Accessories.html" class="Link">Accessories</a></li>
+      <li><a href="Toys.html" class="Link active">Toys</a></li>
+      <li><a href="Seller.html" class="Link">Seller</a></li>
+      <li><a href="User.html" class="Link">User</a></li>
+    </ul>
+  </nav>
+  
+  <button class="cart-button">
+			<a href="Cart.html" class="cart-icon Link">🛒</a> 
+		</button>
+  
+  
+</header>
+
+<div class="breadcrumb">
+  <a href="Home.html">Home</a> &gt; <a href="Toys.html">Toys</a>
+</div>
+
+<hr>
+
+<div class="sort-options">
+  <label for="sort_by_price">Sort by Price:</label>
+  <select name="sort_by_price" id="sort_by_price">
+    <option value="low-to-high">low-to-high</option>
+    <option value="high-to-low">high-to-low</option>
+  </select>
+  
+  <label for="sort_by_name">Sort by Name:</label>
+  <select name="sort_by_name" id="sort_by_name">
+    <option value="A-Z">A-Z</option>
+    <option value="Z-A">Z-A</option>
+  </select>
+</div>
+
+<main>
+  <div class="items" id="product-list">
+  
+  
+  
+   <div class="card" data-name="Duck On Car" data-price="4">
+    <img class="Product-image" src="images/duck.jpg" alt="Duck Toy">
+    <div class="product-price">4</div>
+    <div class="product-name">Duck On Car</div>
+	
+   
+       <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	
+	
+    <div class="description">Cute press and roll yellow duck car toy for kids, boys and girls.</div>
+</div>
+
+
+
+    <div class="card" data-name="Car Transformer" data-price="8">
+      <img class="Product-image" src="images/car.jpg" alt="car to transformer toy">
+      <div class="product-price">8</div>
+      <div class="product-name">Car Transformer</div>
+	  
+       <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	
+      <div class="description">Deformation collision transforming car toy for kids, boys.</div>
+    </div>
+
+    <div class="card" data-name="Tic-Tac-Toe Board" data-price="5">
+      <img class="Product-image" src="images/tictac.jpg" alt="X O Board">
+      <div class="product-price">5</div>
+      <div class="product-name">Tic-Tac-Toe Board</div>
+      
+	   <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	  
+      <div class="description">Wooden XO tic-tac-toe game for all ages.</div>
+    </div>
+
+    <div class="card" data-name="Dancing Cactus" data-price="12">
+      <img class="Product-image" src="images/cactus.jpg" alt="dancing cactus toy">
+      <div class="product-price">12</div>
+      <div class="product-name">Dancing Cactus</div>
+     
+	  <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	 
+      <div class="description">Dancing, singing and twisting cactus plushie for all ages.</div>
+    </div>
+
+    <div class="card" data-name="Stitch Plushie" data-price="10">
+      <img class="Product-image" src="images/stich.jpg" alt="stich plushie toy">
+      <div class="product-price">10</div>
+      <div class="product-name">Stitch Plushie</div>
+	  
+      <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	
+      <div class="description">Fluffy cartoon character <em>Stitch</em> plushie for all ages.</div>
+    </div>
+
+    <div class="card" data-name="Pikachu Plushie" data-price="9.50">
+      <img class="Product-image" src="images/pikacho.jpg" alt="pikachu plushie toy">
+      <div class="product-price">9.50</div>
+      <div class="product-name">Pikachu Plushie</div>
+     
+	  <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	 
+      <div class="description">Fluffy cartoon character <em>pikachu</em> plushie for all ages.</div>
+    </div>
+
+    <div class="card" data-name="Batman Statue" data-price="17">
+      <img class="Product-image" src="images/batman.jpg" alt="batman avatar toy">
+      <div class="product-price">17</div>
+      <div class="product-name">Batman Statue</div>
+     
+	  <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	 
+      <div class="description"><em>Batman</em> figure statue doll for all ages, boys.</div>
+    </div>
+
+    <div class="card" data-name="Colored Balls" data-price="6">
+      <img class="Product-image" src="images/balls.jpg" alt="colored balls toy">
+      <div class="product-price">6</div>
+      <div class="product-name">Colored Balls</div>
+     
+	  <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	 
+      <div class="description">48 pieces of random colored soft plastic balls for all kids, boys and girls.</div>
+    </div>
+
+    <div class="card" data-name="Hello-kitty Plushie" data-price="18.99">
+      <img class="Product-image" src="images/Hellokitty.jpg" alt="Hello Kitty plushie">
+      <div class="product-price">18.99</div>
+      <div class="product-name">Hello-kitty Plushie</div>
+     
+	  <input type="checkbox" class="select-product">
+    <div class="quantity-controls" >
+        <button class="quantity-btn-decrease" onclick="decreaseQuantity(this)">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn-increase" onclick="increaseQuantity(this)">+</button>
+    </div>    	
+	 
+      <div class="description">Large sized <em>Hello-Kitty</em> fluffy plushie for all ages, girls.</div>
+    </div>
+  </div> <!-- Add more product cards as needed -->
+
+</main> 
+  <footer> 
+    <div class="footer-content">
+      <img src="images/loge-bg.png" alt="Cart Image" class="logo">
+      <div class="contact-us">
+        <h4>Contact Us</h4>
+        <p>+96659823459</p>
+        <p>Carto@gmail.com</p>
+      </div>
+      <div class="divider"></div>
+      <div class="about-us">
+        <h4>About us</h4> 
+        <p>Our platform provides a secure and convenient shopping experience,
+          offering a wide range of products at competitive prices. Enjoy fast delivery,
+          flexible payment options, and hassle-free returns. Shop with confidence, backed by our 24/7 customer support 
+          All products come with an authenticity guarantee and quality warranty</p>
+      </div>
+    </div>
+    <div class="social-icon">
+      <img src="images/WhatsApp.png" alt="WhatsApp" class="social-link">
+      <img src="images/Tiktok.png" alt="Tiktok" class="social-link">
+      <img src="images/Snapchat.png" alt="Snapchat" class="social-link">
+      <img src="images/instagram.png" alt="instagram" class="social-link">
+    </div>
+  </footer>
+  <div class="copyright">
+    &copy;2024 Carto All right reserved
+  </div>
+
+
+<script>
+
+
+ // Function to sort items by price
+    document.getElementById("sort_by_price").addEventListener("change", function() {
+        const sortOrder = this.value;
+        const itemsContainer = document.querySelector(".items");
+        const items = Array.from(itemsContainer.children);
+
+        items.sort((a, b) => {
+            const priceA = parseInt(a.querySelector(".product-price").innerText);
+            const priceB = parseInt(b.querySelector(".product-price").innerText);
+            return sortOrder === "low-to-high" ? priceA - priceB : priceB - priceA;
+        });
+
+        items.forEach(item => itemsContainer.appendChild(item));
+    });
+
+    // Function to sort items by name
+    document.getElementById("sort_by_name").addEventListener("change", function() {
+        const sortOrder = this.value;
+        const itemsContainer = document.querySelector(".items");
+        const items = Array.from(itemsContainer.children);
+
+        items.sort((a, b) => {
+            const nameA = a.querySelector(".product-name").innerText.toLowerCase();
+            const nameB = b.querySelector(".product-name").innerText.toLowerCase();
+            if (sortOrder === "A-Z") {
+                return nameA.localeCompare(nameB);
+            } else {
+                return nameB.localeCompare(nameA);
+            }
+        });
+
+        items.forEach(item => itemsContainer.appendChild(item));
+    });
+
+   
+
+// Function to increase quantity
+function increaseQuantity(button) {
+    const quantityDisplay = button.previousElementSibling;
+    let quantity = parseInt(quantityDisplay.innerText);
+    quantityDisplay.innerText = ++quantity;
+}
+
+// Function to decrease quantity
+function decreaseQuantity(button) {
+    const quantityDisplay = button.nextElementSibling;
+    let quantity = parseInt(quantityDisplay.innerText);
+    if (quantity > 1) {
+        quantityDisplay.innerText = --quantity;
+    }
+}
+function addToCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const products = document.querySelectorAll('.card');
+
+    products.forEach(product => {
+        const isSelected = product.querySelector('.select-product').checked;
+        if (isSelected) {
+            const productImg = product.querySelector('.Product-image').src;
+            const productName = product.querySelector('.product-name').innerText;
+            const productPrice = product.querySelector('.product-price').innerText;
+            const quantity = product.querySelector('.quantity').innerText;
+
+            const productObject = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity,
+                image: productImg
+            };
+
+            const existingProductIndex = cart.findIndex(item => item.name === productObject.name && item.price === productObject.price);
+            if (existingProductIndex !== -1) {
+                cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(productObject.quantity);
+            } else {
+                cart.push(productObject);
+            }
+        }
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+
+
+window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
+
+
+</script>
+
+
+  
+</body>
+</html>
