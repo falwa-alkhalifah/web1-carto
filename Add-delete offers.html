@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add-Delete offers-Carto</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+
 </head>
 <body>
   
@@ -60,7 +62,7 @@
         <!-- Available Offers Section -->
         <h2>Available Offers</h2>
         <div class="All-Offer" id="offersContainer"></div>
-        <button type="button" onclick="deleteSelected()">- Delete Selected Offers</button>
+        <button type="button" id="buttonDel" onclick="deleteSelected()">- Delete Selected Offers</button>
     </main>
 
     <!-- Footer Section -->
@@ -94,11 +96,11 @@
 
   
     <script>
-        window.onload = function() {
+          window.onload = function() {
            
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-theme');
-            }
+           if (localStorage.getItem('theme') === 'dark') {
+               document.body.classList.add('dark-theme');
+           }
         };
 
         var offers = [
@@ -117,7 +119,7 @@ function renderOffers() {
             <div class="offer">
                 <img src="${offers[i].imgSrc}" alt="${offers[i].name}" class="offerimage">
                 <div class="offerdetails">
-                    <h3>${offers[i].name}</h3>
+                    <h3 style="color: black;">${offers[i].name}</h3>
                     <p>${offers[i].description}</p>
                 </div>
                 <label>
