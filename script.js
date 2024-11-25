@@ -1,4 +1,4 @@
-function validateForm() {
+
    function validateForm() {
     const stars = document.querySelectorAll('.overall-rating .rating .star'); 
 	const orderNumber = document.getElementById('orderNumber').value.trim();
