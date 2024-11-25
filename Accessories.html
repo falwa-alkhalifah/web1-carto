@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>Carto</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="Style.css">
 	    	<script src="script.js" defer></script>
     </head>
@@ -23,8 +22,10 @@
             </ul>
         </nav>
 		
-		<button class="cart-button cart-icon" onclick="addToCart(event)">🛒</button>
 
+<button class="cart-button">
+    <a href="Cart.html" class="cart-icon Link" onclick="addToCart()">🛒</a>
+</button>
 
 
 
@@ -782,41 +783,38 @@ function decreaseQuantity(button) {
         quantityDisplay.innerText = --quantity;
     }
 }
-function addToCart(event) {
-    event.preventDefault(); 
+function addToCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    const selectedProducts = [];
-    
-    const checkboxes = document.querySelectorAll('.select-product');
+    const products = document.querySelectorAll('.card');
 
-    checkboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-            const productName = checkbox.getAttribute('data-name');
-            const productPrice = parseFloat(checkbox.getAttribute('data-price'));
-            const productQuantity = parseInt(checkbox.getAttribute('data-quantity'));
+    products.forEach(product => {
+        const isSelected = product.querySelector('.select-product').checked;
+        if (isSelected) {
+            const productImg = product.querySelector('.Product-image').src;
+            const productName = product.querySelector('.product-name').innerText;
+            const productPrice = product.querySelector('.product-price').innerText;
+            const quantity = product.querySelector('.quantity').innerText;
 
-            selectedProducts.push({
+            const productObject = {
                 name: productName,
                 price: productPrice,
-                quantity: productQuantity,
-                image: checkbox.getAttribute('data-image') // Add product image if needed
-            });
+                quantity: quantity,
+                image: productImg
+            };
+
+            const existingProductIndex = cart.findIndex(item => item.name === productObject.name && item.price === productObject.price);
+            if (existingProductIndex !== -1) {
+                cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(productObject.quantity);
+            } else {
+                cart.push(productObject);
+            }
         }
     });
 
-    // Get existing cart from localStorage or initialize empty array
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Append the new selected products to the existing cart
-    cart = cart.concat(selectedProducts);
-
-    // Save the updated cart back to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Notify the user and navigate to the cart page
-    alert('Products have been added to your cart!');
-    window.location.href = 'Cart.html';
 }
+
 
 </script>
 
