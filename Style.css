@@ -55,6 +55,12 @@
     background-color: #ddd;
   }
   
+  .select-product{
+	  width: 22%;
+	  height: 8%;
+	  float: right; 
+	  
+  }
   
   /* Rana */ 
   
