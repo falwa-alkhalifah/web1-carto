@@ -65,23 +65,24 @@ function setRating(rating) {
                 itemsContainer.innerHTML = '<p>No products to rate.</p>';
                 return;
             }
-purchasedItems.forEach((item, index) => {
-                const itemDiv = document.createElement('div');
-                itemDiv.classList.add('rating-container');
-                itemDiv.innerHTML = `
-                    <p>${item.name} - ${item.price} SAR</p>
+    purchasedItems.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('rate-card');
+        itemDiv.innerHTML = `
+            <div class="rate-card-header">
+                <p><strong>${item.name}</strong> - ${item.price} SAR</p>
+            </div>
+            <div class="rate-card-rating">
+                <label class="star" onclick="setActiveStar(this)">★</label>
+                <label class="star" onclick="setActiveStar(this)">★</label>
+                <label class="star" onclick="setActiveStar(this)">★</label>
+                <label class="star" onclick="setActiveStar(this)">★</label>
+                <label class="star" onclick="setActiveStar(this)">★</label>
+            </div>
+            <label for="bag-comments-${index}">Comments:</label>
+            <textarea id="bag-comments-${index}" placeholder="Add a comment"></textarea>
+        `;
+        itemsContainer.appendChild(itemDiv);
+    });
+}
 
-					<div class="rating">
-                           <label class="star" onclick="setActiveStar(this)">★</label>
-    <label class="star" onclick="setActiveStar(this)">★</label>
-    <label class="star" onclick="setActiveStar(this)">★</label>
-    <label class="star" onclick="setActiveStar(this)">★</label>
-    <label class="star" onclick="setActiveStar(this)">★</label>
-                        </div>
-                        <label for="bag-comments">Comments:</label>
-                        <textarea id="bag-comments" placeholder="Comments"></textarea>
-                    </div>
-                `;
-                itemsContainer.appendChild(itemDiv);
-            });
-        }
