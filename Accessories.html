@@ -815,7 +815,12 @@ function addToCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-
+window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
 </script>
 
 
