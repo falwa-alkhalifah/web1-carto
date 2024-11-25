@@ -209,6 +209,12 @@ function renderProducts() {
 
 document.addEventListener("DOMContentLoaded", renderProducts);
 
+window.onload = function() {
+           
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        };
 </script>
 
 
