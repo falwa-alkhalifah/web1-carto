@@ -23,9 +23,11 @@
             </ul>
         </nav>
 		
-		<button class="cart-button">
-			<a href="Cart.html" class="cart-icon Link">🛒</a> 
-		</button>
+		<button class="cart-button cart-icon" onclick="addToCart(event)">🛒</button>
+
+
+
+
 		
 </header>
 
@@ -780,20 +782,40 @@ function decreaseQuantity(button) {
         quantityDisplay.innerText = --quantity;
     }
 }
+function addToCart(event) {
+    event.preventDefault(); 
 
-// Function to add product to cart
-function addToCart(button) {
-    const card = button.closest('.card');
-    const isSelected = card.querySelector('.select-product').checked;
-    const productName = card.querySelector('.product-name').innerText;
-    const productPrice = card.querySelector('.product-price').innerText;
-    const quantity = card.querySelector('.quantity').innerText;
+    const selectedProducts = [];
+    
+    const checkboxes = document.querySelectorAll('.select-product');
 
-    if (isSelected) {
-        alert(`Added ${quantity} of ${productName} to the cart for $${productPrice * quantity}`);
-    } else {
-        alert("Please select the product to add to the cart.");
-    }
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            const productName = checkbox.getAttribute('data-name');
+            const productPrice = parseFloat(checkbox.getAttribute('data-price'));
+            const productQuantity = parseInt(checkbox.getAttribute('data-quantity'));
+
+            selectedProducts.push({
+                name: productName,
+                price: productPrice,
+                quantity: productQuantity,
+                image: checkbox.getAttribute('data-image') // Add product image if needed
+            });
+        }
+    });
+
+    // Get existing cart from localStorage or initialize empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Append the new selected products to the existing cart
+    cart = cart.concat(selectedProducts);
+
+    // Save the updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Notify the user and navigate to the cart page
+    alert('Products have been added to your cart!');
+    window.location.href = 'Cart.html';
 }
 
 </script>
