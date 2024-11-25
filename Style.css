@@ -826,6 +826,8 @@
 /*--------------*/
 
 /* General Reset */
+@media (max-width: 768px) {
+
 * {
     margin: 0;
     padding: 0;
@@ -898,28 +900,24 @@ header nav ul li a:hover {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
 /* Reviews Section */
 .review-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Allow children to wrap */
+    gap: 15px; /* Add space between items */
+    justify-content: center; /* Center-align items */
     padding: 20px;
 }
 
 .review-card {
+    width : 55%;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
     background-color: #fff;
+    padding: 15px;
     text-align: left;
 }
 
-.review-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
 
 /* Footer Styles */
 footer {
@@ -930,17 +928,17 @@ footer {
 }
 
 footer .social-icon img {
+    display: flex;
     width: 30px;
     height: 30px;
     margin: 5px;
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
     header nav ul {
         flex-direction: column;
         gap: 10px;
-    }
+    
 
     .flex-container {
         flex-direction: column;
@@ -956,6 +954,7 @@ footer .social-icon img {
 
     footer .social-icon img {
         width: 25px;
-        height: 25px;
+       height: 25px;     
     }
+}
 }
