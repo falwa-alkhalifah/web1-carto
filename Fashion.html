@@ -522,8 +522,8 @@ Material: Cotton
         const items = Array.from(itemsContainer.children);
 
         items.sort((a, b) => {
-            const priceA = parseInt(a.querySelector(".price").innerText);
-            const priceB = parseInt(b.querySelector(".price").innerText);
+            const priceA = parseInt(a.querySelector(".product-price").innerText);
+            const priceB = parseInt(b.querySelector(".product-price").innerText);
             return sortOrder === "low-to-high" ? priceA - priceB : priceB - priceA;
         });
 
@@ -537,8 +537,8 @@ Material: Cotton
         const items = Array.from(itemsContainer.children);
 
         items.sort((a, b) => {
-            const nameA = a.querySelector(".name").innerText.toLowerCase();
-            const nameB = b.querySelector(".name").innerText.toLowerCase();
+            const nameA = a.querySelector(".product-name").innerText.toLowerCase();
+            const nameB = b.querySelector(".product-name").innerText.toLowerCase();
             if (sortOrder === "A-Z") {
                 return nameA.localeCompare(nameB);
             } else {
